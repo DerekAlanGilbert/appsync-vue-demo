@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "appsync-vue-demo-20190318170927-authRole",
+            "UnauthRoleArn": "arn:aws:iam::035746036990:role/appsync-vue-demo-20190318170927-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::035746036990:role/appsync-vue-demo-20190318170927-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "appsync-vue-demo-20190318170927-deployment",
+            "UnauthRoleName": "appsync-vue-demo-20190318170927-unauthRole",
+            "StackName": "appsync-vue-demo-20190318170927",
+            "StackId": "arn:aws:cloudformation:us-east-2:035746036990:stack/appsync-vue-demo-20190318170927/e10016b0-49d2-11e9-8435-0626229bfdda"
+        }
+    }
+}

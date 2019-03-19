@@ -1,0 +1,7 @@
+type Person @model @searchable {
+  id: ID!
+  name: String!
+  email: String
+  DOB: String
+  phone: String
+}

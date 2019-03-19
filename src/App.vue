@@ -1,29 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <demo-page v-if="hydrated"></demo-page>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+  import DemoPage from '@/components/demoPage'
+
+  export default {
+    name: 'app',
+    async mounted() {
+      await this.$apollo.provider.defaultClient.hydrated()
+      this.hydrated = true
+    },
+    data() {
+      return {
+        hydrated: false
+      }
+    },
+    components: {
+      DemoPage
     }
   }
-}
+
+</script>
+
+
+<style lang="scss">
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  #app {
+    padding: 40px;
+  } 
 </style>
